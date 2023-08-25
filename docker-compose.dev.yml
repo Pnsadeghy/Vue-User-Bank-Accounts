@@ -1,0 +1,13 @@
+# for local development
+version: '3.7'
+services:
+  vue:
+    container_name: vue-user-bank-accounts
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3200:5173"
+    volumes:
+      - .:/var/www/html/app
+      - /var/www/html/app/node_modules

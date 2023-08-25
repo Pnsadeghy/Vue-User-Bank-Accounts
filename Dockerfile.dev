@@ -1,0 +1,5 @@
+FROM node:lts-alpine as develop-stage
+WORKDIR /var/www/html/app
+COPY package*.json ./
+RUN npm i
+CMD npm run dev
